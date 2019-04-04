@@ -86,10 +86,10 @@ class Academic extends Component {
 					卒業論文「光干渉計を用いた一般的な量子位相推定」<br />
 					A general quantum phase estimation using optical interferometer
 					<br/>
-					<Button variant="outlined" className={classes.button}>
+					<Button variant="outlined" className={classes.button} href='https://firebasestorage.googleapis.com/v0/b/portfolio-43cec.appspot.com/o/abstract.pdf?alt=media&token=26332ea3-679a-42ad-9216-1ad52150fe57' target='_blank'>
 						概要
 					</Button>
-					<Button variant="outlined" className={classes.button}>
+					<Button variant="outlined" className={classes.button} href='https://firebasestorage.googleapis.com/v0/b/portfolio-43cec.appspot.com/o/15B02057.pdf?alt=media&token=dbcc2023-05f7-4525-9124-1180a9d81b1e' target='_blank'>
 						PDF
 					</Button>
 				</div>

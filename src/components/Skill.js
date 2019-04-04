@@ -19,7 +19,7 @@ const styles = theme => ({
 		alignItems: "center", /* 縦方向の中央揃え */
 		justifyContent: "center", /* 横方向の中央揃え */
 		flexDirection: "column",
-		
+
 	},
 	myNameArea: {
 		color: "#8f8ecb",
@@ -111,27 +111,27 @@ class Skill extends Component {
 				>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							<CardActionArea>
-								<CardMedia
-									className={classes.media}
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
-								/>
-								<CardContent>
-									<Typography gutterBottom className={classes.myCardContentArea}>
-										Realtime GPS tracking system
-									</Typography>
-									<Typography component="p">
-										森の中を走るオリエンテーリング競技者の現在地を、リアルタイムで地図上に表示します。<br />
-										React, Redux, Firebase Realtime Database, Swift
-									</Typography>
-								</CardContent>
-							</CardActionArea>
+							{/* <CardActionArea> */}
+							<CardMedia
+								className={classes.media}
+								image="/static/images/cards/contemplative-reptile.jpg"
+								title="Contemplative Reptile"
+							/>
+							<CardContent>
+								<Typography gutterBottom className={classes.myCardContentArea}>
+									Realtime GPS tracking system
+								</Typography>
+								<Typography component="p">
+									森の中を走るオリエンテーリング競技者の現在地を、リアルタイムで地図上に表示します。<br />
+									React, Redux, Firebase Realtime Database, Swift
+								</Typography>
+							</CardContent>
+							{/* </CardActionArea> */}
 							<CardActions>
-								<Button size="small" color="primary">
+								<Button size="small" color="primary" href='https://tracko.o-app.net/' target='_blank'>
 									View
 								</Button>
-								<Button size="small" color="primary">
+								<Button size="small" color="primary" href='https://github.com/cola119/tracko-react' target='_blank'>
 									GitHub
 								</Button>
 							</CardActions>
@@ -139,28 +139,28 @@ class Skill extends Component {
 					</Grid>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							<CardActionArea>
-								<CardMedia
-									className={classes.media}
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
-								/>
-								<CardContent>
-									<Typography gutterBottom className={classes.myCardContentArea}>
-										LapCenter検索
-									</Typography>
-									<Typography component="p">
-										オリエンテーリングの成績がまとまったLapCenterをスクレイピングしてデータ化。<br/>
-										自由に成績を追加しグラフ化することで、時系列での成績推移を確認できる。<br />
-										Laravel, Python(Beautiful Soup), D3.js
-									</Typography>
-								</CardContent>
-							</CardActionArea>
+							{/* <CardActionArea> */}
+							<CardMedia
+								className={classes.media}
+								image="/static/images/cards/contemplative-reptile.jpg"
+								title="Contemplative Reptile"
+							/>
+							<CardContent>
+								<Typography gutterBottom className={classes.myCardContentArea}>
+									LapCenter検索
+								</Typography>
+								<Typography component="p">
+									オリエンテーリングの成績がまとまったLapCenterをスクレイピングしてデータ化。<br/>
+									自由に成績を追加しグラフ化することで、時系列での成績推移を確認できる。<br />
+									Laravel, Python(Beautiful Soup), D3.js
+								</Typography>
+							</CardContent>
+							{/* </CardActionArea> */}
 							<CardActions>
-								<Button size="small" color="primary">
+								<Button size="small" color="primary" href='https://lcsearch.o-app.net/' target='_blank'>
 									View
 								</Button>
-								<Button size="small" color="primary">
+								<Button size="small" color="primary" href='https://github.com/cola119/lcsearch' target='_blank'>
 									GitHub
 								</Button>
 							</CardActions>
@@ -168,29 +168,26 @@ class Skill extends Component {
 					</Grid>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							<CardActionArea>
-								<CardMedia
-									className={classes.media}
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
-								/>
-								<CardContent>
-									<Typography gutterBottom className={classes.myCardContentArea}>
-										トレーニング管理サイトwith LINE bot
-									</Typography>
-									<Typography component="p">
-										部内向けのトレーニング管理サイト。走行距離や筋トレ数を入力しポイント化、毎週のランキング表示。
-										LINE botとのトークで成績追加が可能。<br/>
-										Laravel, D3.js, LINE Messaging API
-									</Typography>
-								</CardContent>
-							</CardActionArea>
+							{/* <CardActionArea> */}
+							<CardMedia
+								className={classes.media}
+								image="/static/images/cards/contemplative-reptile.jpg"
+								title="Contemplative Reptile"
+							/>
+							<CardContent>
+								<Typography gutterBottom className={classes.myCardContentArea}>
+									トレーニング管理サイトwith LINE bot
+								</Typography>
+								<Typography component="p">
+									部内向けのトレーニング管理サイト。走行距離や筋トレ数を入力しポイント化、毎週のランキング表示。
+									LINE botとのトークで成績追加が可能。<br/>
+									Laravel, D3.js, LINE Messaging API
+								</Typography>
+							</CardContent>
+							{/* </CardActionArea> */}
 							<CardActions>
-								<Button size="small" color="primary">
-									Share
-								</Button>
-								<Button size="small" color="primary">
-									Learn More
+								<Button size="small" color="primary" href='https://github.com/cola119/LINEbot_for_training' target='_blank'>
+									github
 								</Button>
 							</CardActions>
 						</Card>

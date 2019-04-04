@@ -51,13 +51,13 @@ class Header extends Component {
 					Master's degree in computer science.
 				</Typography>
 				<Typography align="center" color="textSecondary" component="p">
-					<IconButton className={classes.button} aria-label="GitHub">
+					<IconButton className={classes.button} aria-label="GitHub" href='https://github.com/cola119' target='_blank'>
 						<GitHub nativeColor="#ffffe6" fontSize="large"/>
 					</IconButton>
-					<IconButton className={classes.button} aria-label="Twitter">
+					<IconButton className={classes.button} aria-label="Twitter" href='https://twitter.com/cola119_' target='_blank'>
 						<Twitter nativeColor="#ffffe6" fontSize="large"/>
 					</IconButton>
-					<IconButton className={classes.button} aria-label="Hatena">
+					<IconButton className={classes.button} aria-label="Hatena" href='https://cola119.hatenablog.com/archive' target='_blank'>
 						<Hatena nativeColor="#ffffe6" fontSize="large"/>
 					</IconButton>
 				</Typography>
