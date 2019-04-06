@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
 	header: {
-		padding: "40px 0",
+		padding: "80px 0",
 		width: "100vw",
 		// height: "100vh",
 		backgroundColor: "#ffffe6",
@@ -111,7 +111,6 @@ class Skill extends Component {
 				>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							{/* <CardActionArea> */}
 							<CardMedia
 								className={classes.media}
 								image="/static/images/cards/contemplative-reptile.jpg"
@@ -126,7 +125,6 @@ class Skill extends Component {
 									React, Redux, Firebase Realtime Database, Swift
 								</Typography>
 							</CardContent>
-							{/* </CardActionArea> */}
 							<CardActions>
 								<Button size="small" color="primary" href='https://tracko.o-app.net/' target='_blank'>
 									View
@@ -139,7 +137,6 @@ class Skill extends Component {
 					</Grid>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							{/* <CardActionArea> */}
 							<CardMedia
 								className={classes.media}
 								image="/static/images/cards/contemplative-reptile.jpg"
@@ -155,7 +152,6 @@ class Skill extends Component {
 									Laravel, Python(Beautiful Soup), D3.js
 								</Typography>
 							</CardContent>
-							{/* </CardActionArea> */}
 							<CardActions>
 								<Button size="small" color="primary" href='https://lcsearch.o-app.net/' target='_blank'>
 									View
@@ -168,7 +164,6 @@ class Skill extends Component {
 					</Grid>
 					<Grid item sm={6} md={4} lg={3}>
 						<Card className={classes.card}>
-							{/* <CardActionArea> */}
 							<CardMedia
 								className={classes.media}
 								image="/static/images/cards/contemplative-reptile.jpg"
@@ -184,7 +179,6 @@ class Skill extends Component {
 									Laravel, D3.js, LINE Messaging API
 								</Typography>
 							</CardContent>
-							{/* </CardActionArea> */}
 							<CardActions>
 								<Button size="small" color="primary" href='https://github.com/cola119/LINEbot_for_training' target='_blank'>
 									github
