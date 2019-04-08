@@ -42,7 +42,7 @@ const styles = theme => ({
 	},
 	myContentArea: {
 		color: "#ffffe6",
-		fontSize: `calc(100vw / 40)`,
+		fontSize: `calc(100vw / 40)+20`,
 		[theme.breakpoints.up('sm')]: {
 			fontSize: `20px`
 		},
@@ -54,7 +54,8 @@ const styles = theme => ({
 		[theme.breakpoints.up('sm')]: {
 			fontSize: `20px`
 		},
-		padding: "10px 0px",
+		lineHeight: 2,
+		padding: "20px 0px",
 	},
 	myName: {
 		borderBottom: "solid 3px #9f9ece",

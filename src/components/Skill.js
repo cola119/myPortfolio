@@ -10,61 +10,53 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
-	header: {
+	root: {
 		padding: "80px 0",
 		width: "100vw",
-		// height: "100vh",
 		backgroundColor: "#ffffe6",
-		display: "flex", /* 要素をflexboxに対応させる */
-		alignItems: "center", /* 縦方向の中央揃え */
-		justifyContent: "center", /* 横方向の中央揃え */
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 		flexDirection: "column",
 
 	},
 	myNameArea: {
 		color: "#8f8ecb",
-		// fontSize: "3rem",
 		fontSize: "10vw",
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `60px`
+			fontSize: "60px"
 		},
-		// paddingBottom: "30px"
 	},
 	myNameSubArea: {
 		color: "#8f8ecb",
-		// fontSize: "2rem"
 		fontSize: "6vw",
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `40px`
+			fontSize: "40px"
 		},
 		paddingBottom: "20px"
 	},
 	myContentArea: {
 		color: "#8f8ecb",
-		fontSize: `calc(100vw / 40)`,
+		fontSize: `calc(100vw / 40)+20`,
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
+			fontSize: "25px"
 		},
 		padding: "40px 0px",
-	},
-	myContentSubArea: {
-		color: "#8f8ecb",
-		fontSize: `calc(100vw / 40)`,
-		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
-		},
-		padding: "10px 0px",
 	},
 	myName: {
 		borderBottom: "solid 3px #9f9ece",
 		padding: "10px 30px",
+	},
+	myIconArea: {
+		paddingTop: 10,
+		fontSize: "40px"
 	},
 	button: {
 		margin: theme.spacing.unit,
 		color: "#8f8ecb",
 		fontSize: `calc(100vw / 40)`,
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
+			fontSize: "20px"
 		},
 	},
 	card: {
@@ -88,21 +80,55 @@ class Skill extends Component {
 	render() {
 		const {classes} = this.props;
 		return (
-			<div className={classes.header}>
-				<Typography className={classes.myNameArea} >
+			<div className={classes.root}>
+				<div className={classes.myNameArea} >
 					<span className={classes.myName}>Skill</span>
-				</Typography>
-				<Typography className={classes.myContentArea} >
-					Like:<br/>
-					React, Redux, Laravel, Ruby on Rails<br/><br/>
-					Interesting:<br/>
-					Golang, Swift
-				</Typography>
-				<Typography className={classes.myNameSubArea} >
+				</div>
+				<div className={classes.myContentArea} >
+					like:<br/>
+					React, Laravel, Ruby on Rails<br/>
+					<div className={classes.myIconArea}>
+						<Grid container
+							direction="row"
+							justify="center"
+							alignItems="center"
+							spacing={40}
+						>
+							<Grid item xs={3}>
+								<i className="devicon-react-original"></i>
+							</Grid>
+							<Grid item xs={3}>
+								<i className="devicon-laravel-plain"></i>
+							</Grid>
+							<Grid item xs={3}>
+								<i className="devicon-rails-plain"></i>
+							</Grid>
+						</Grid>
+					</div>
+					<br />
+					interesting:<br/>
+					Golang, Swift<br/>
+					<div className={classes.myIconArea}>
+						<Grid container
+							direction="row"
+							justify="center"
+							alignItems="center"
+							spacing={24}
+						>
+							<Grid item xs={3}>
+								<i className="devicon-go-plain"></i>
+							</Grid>
+							<Grid item xs={3}>
+								<i className="devicon-swift-plain"></i>
+							</Grid>
+						</Grid>
+					</div>
+				</div>
+				<div className={classes.myNameSubArea} >
 					Products
-				</Typography>
+				</div>
 
-				<Grid
+				{/* <Grid
 					spacing={40}
 					container
 					direction="row"
@@ -186,7 +212,7 @@ class Skill extends Component {
 							</CardActions>
 						</Card>
 					</Grid>
-				</Grid>
+				</Grid> */}
 			</div>
 		);
 	}
