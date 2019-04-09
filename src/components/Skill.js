@@ -88,7 +88,7 @@ class Skill extends Component {
 	render() {
 		const {classes} = this.props;
 		return (
-			<div className={classes.root}>
+			<div className={classes.root} id="skill">
 				<div className={classes.myNameArea} >
 					<span className={classes.myName}>Skill</span>
 				</div>

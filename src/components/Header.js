@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import { HashRouter, Route } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 // #ffffe6 : #8f8ecb
 const styles = theme => ({
@@ -34,9 +38,16 @@ const styles = theme => ({
 		borderBottom: "solid 3px #9f9ece",
 		padding: "10px 30px",
 	},
-	button: {
-		margin: theme.spacing.unit,
+	link: {
+		textDecoration: "none",
 	},
+	myLinkArea: {
+		marginTop: theme.spacing.unit*10,
+	},
+	linkButton: {
+		backgroundColor: "#ffffe6",
+		color: "#8f8ecb",
+	}
 });
 
 class Header extends Component {
@@ -61,6 +72,36 @@ class Header extends Component {
 						<Hatena nativeColor="#ffffe6" fontSize="large"/>
 					</IconButton>
 				</Typography>
+				<div className={classes.myLinkArea}>
+					<Grid container
+						direction="row"
+						justify="center"
+						alignItems="center"
+						spacing={24}
+					>
+						<Grid item xs={4} className={classes.linkArea}>
+							<Link smooth to="#academic" className={classes.link}>
+								<Button variant="outlined" className={classes.linkButton}>
+									学歴
+								</Button>
+							</Link>
+						</Grid>
+						<Grid item xs={4}>
+							<Link smooth to="#interest" className={classes.link}>
+								<Button variant="outlined" className={classes.linkButton}>
+									趣味
+								</Button>
+							</Link>
+						</Grid>
+						<Grid item xs={4}>
+							<Link smooth to="#skill" className={classes.link}>
+								<Button variant="outlined" className={classes.linkButton}>
+									技術
+								</Button>
+							</Link>
+						</Grid>
+					</Grid>
+				</div>
 			</div>
 		);
 	}

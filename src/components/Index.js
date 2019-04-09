@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import MyAppBar from './MyAppBar.js';
+
 import Header from './Header.js';
 import Academic from './Academic.js';
 import Hobby from './Hobby.js';

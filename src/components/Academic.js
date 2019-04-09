@@ -75,7 +75,7 @@ const Academic = (props) => {
 	const matches = useMediaQuery('(min-height:600px)');
 	const { classes } = props;
 	return (
-		<div className={ matches ? classes.root1 : classes.root2}>
+		<div className={ matches ? classes.root1 : classes.root2} id="academic">
 			<Typography className={classes.myNameArea} >
 				<span className={classes.myName}>Academic</span>
 			</Typography>
