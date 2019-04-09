@@ -10,13 +10,13 @@ import Grid from '@material-ui/core/Grid';
 
 // #ffffe6 : #8f8ecb
 const styles = theme => ({
-	header: {
+	root: {
 		width: "100vw",
 		height: "100vh",
 		backgroundColor: "#8f8ecb",
-		display: "flex", /* 要素をflexboxに対応させる */
-		alignItems: "center", /* 縦方向の中央揃え */
-		justifyContent: "center", /* 横方向の中央揃え */
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 		flexDirection: "column",
 	},
 	myNameArea: {
@@ -42,7 +42,9 @@ const styles = theme => ({
 		textDecoration: "none",
 	},
 	myLinkArea: {
-		marginTop: theme.spacing.unit*10,
+		// marginTop: theme.spacing.unit*10,
+		position: "absolute",
+		bottom: theme.spacing.unit*15
 	},
 	linkButton: {
 		backgroundColor: "#ffffe6",
@@ -54,7 +56,7 @@ class Header extends Component {
 	render() {
 		const {classes} = this.props;
 		return (
-			<div className={classes.header}>
+			<div className={classes.root} id="top">
 				<Typography className={classes.myNameArea} >
 					<span className={classes.myName}>上野　康平</span>
 				</Typography>
