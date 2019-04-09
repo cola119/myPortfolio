@@ -13,6 +13,8 @@ import lcsearch from '../img/lcsearch.png';
 import trecamp from '../img/trecamp.png';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
+import Tracko from './Tracko';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const styles = theme => ({
 	root: {
@@ -81,7 +83,11 @@ const styles = theme => ({
 	},
 	myProductArea: {
 		margin: "0px 20px"
-	}
+	},
+	link: {
+		color: "8f8ecb",
+		textDecoration: "none",
+	},
 });
 
 class Skill extends Component {
@@ -152,7 +158,7 @@ class Skill extends Component {
 								/>
 								<CardContent>
 									<div className={classes.myCardContentArea}>
-										Realtime GPS tracking system
+										<Link to="/Tracko" className={classes.link}>Realtime GPS tracking system</Link>
 									</div>
 									<Typography component="p">
 										森の中を走るオリエンテーリング競技者の現在地を、リアルタイムで地図上に表示します。<br />
@@ -160,6 +166,11 @@ class Skill extends Component {
 									</Typography>
 								</CardContent>
 								<CardActions>
+									<Link to="/Tracko" className={classes.link}>
+										<Button size="small" color="primary" href='https://tracko.o-app.net/' target='_blank'>
+											詳細
+										</Button>
+									</Link>
 									<Button size="small" color="primary" href='https://tracko.o-app.net/' target='_blank'>
 										View
 									</Button>
@@ -182,7 +193,7 @@ class Skill extends Component {
 									</div>
 									<Typography component="p">
 										オリエンテーリングの成績がまとまったLapCenterをスクレイピングしてデータ化。<br/>
-										自由に成績を追加しグラフ化することで、時系列での成績推移を確認できる。<br />
+										自由に成績を追加しグラフ化することで、時系列での成績推移を確認できる。<br />
 										Laravel, Python(Beautiful Soup), D3.js
 									</Typography>
 								</CardContent>

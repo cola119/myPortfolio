@@ -7,18 +7,18 @@ import Index from './components/Index';
 import Academic from './components/Academic';
 import Hobby from './components/Hobby';
 import Skill from './components/Skill';
+import Tracko from './components/Tracko';
+import ScrollToTop from './ScrollToTop';
 
 ReactDOM.render(
-	// <HashRouter hashType="noslash">
-	// 	<Switch>
-	// 		<Route exact path="/" component={Index} />
-	// 		{/* <Route path="#academic" component={Academic} /> */}
-	// 		<Route path="#hobby" component={Hobby} />
-	// 		<Route path="#skill" component={Skill} />
-	// 	</Switch>
-	// </HashRouter>,
+	// <Tracko />,
 	<BrowserRouter>
-		<Index />
+		<ScrollToTop>
+			<Switch>
+				<Route path='/Tracko' component={Tracko} />
+				<Index />
+			</Switch>
+		</ScrollToTop>
 	</BrowserRouter>,
 	document.getElementById('root')
 );
