@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
@@ -8,6 +7,7 @@ const styles = theme => ({
 	root1: {
 		width: "100vw",
 		height: "100vh",
+		color: "#8f8ecb",
 		backgroundColor: "#ffffe6",
 		display: "flex",
 		alignItems: "center",
@@ -17,6 +17,7 @@ const styles = theme => ({
 	root2: {
 		width: "100vw",
 		padding: "150px 0px",
+		color: "#8f8ecb",
 		backgroundColor: "#ffffe6",
 		display: "flex",
 		alignItems: "center",
@@ -24,48 +25,41 @@ const styles = theme => ({
 		flexDirection: "column",
 	},
 	myNameArea: {
-		color: "#8f8ecb",
-		// fontSize: "3rem",
 		fontSize: "10vw",
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `60px`
+			fontSize: "60px"
 		},
-		// paddingBottom: "30px"
-	},
-	myNameSubArea: {
-		color: "#8f8ecb",
-		// fontSize: "2rem"
-		fontSize: "6vw",
-		[theme.breakpoints.up('sm')]: {
-			fontSize: `40px`
-		},
-	},
-	myContentArea: {
-		color: "#8f8ecb",
-		fontSize: `calc(100vw / 40)`,
-		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
-		},
-		padding: "40px 0px",
-	},
-	myContentSubArea: {
-		color: "#8f8ecb",
-		fontSize: `calc(100vw / 40)`,
-		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
-		},
-		padding: "10px 0px",
 	},
 	myName: {
 		borderBottom: "solid 3px #9f9ece",
 		padding: "10px 30px",
 	},
-	button: {
-		margin: theme.spacing.unit,
-		color: "#8f8ecb",
+	myNameSubArea: {
+		fontSize: "6vw",
+		[theme.breakpoints.up('sm')]: {
+			fontSize: "40px"
+		},
+	},
+	myContentArea: {
 		fontSize: `calc(100vw / 40)`,
 		[theme.breakpoints.up('sm')]: {
-			fontSize: `20px`
+			fontSize: "20px"
+		},
+		padding: "40px 0px",
+	},
+	myContentSubArea: {
+		fontSize: `calc(100vw / 40)`,
+		[theme.breakpoints.up('sm')]: {
+			fontSize: "20px"
+		},
+		padding: "10px 0px",
+	},
+	button: {
+		color: "#8f8ecb",
+		margin: theme.spacing.unit,
+		fontSize: `calc(100vw / 40)`,
+		[theme.breakpoints.up('sm')]: {
+			fontSize: "20px"
 		},
 	},
 });
@@ -75,27 +69,26 @@ const Academic = (props) => {
 	const matches = useMediaQuery('(min-height:600px)');
 	const { classes } = props;
 	return (
-		<div className={ matches ? classes.root1 : classes.root2} id="academic">
-			<Typography className={classes.myNameArea} >
+		<div className={matches ? classes.root1 : classes.root2} id="academic">
+			<div className={classes.myNameArea} >
 				<span className={classes.myName}>Academic</span>
-			</Typography>
-			<Typography className={classes.myContentArea} >
+			</div>
+			<div className={classes.myContentArea} >
 				2015 / 04　東京工業大学 理学部 情報科学科<br />
 				2019 / 03　東京工業大学 理学部 情報科学科 卒業<br />
 				2019 / 04　東京工業大学 情報理工学院 数理計算科学系<br />
-			</Typography>
-			<Typography className={classes.myNameSubArea} >
+			</div>
+			<div className={classes.myNameSubArea} >
 				Major
-			</Typography>
-			<Typography className={classes.myContentSubArea} >
-
-				量子計算、量子アルゴリズム、量子情報、線形代数、数理統計学<br/>
+			</div>
+			<div className={classes.myContentSubArea} >
+				量子計算、量子アルゴリズム、量子情報、線形代数、数理統計学<br />
 				Quantum Computing, Quantum Algorithm, Quantum Information<br /><br />
-			</Typography>
-			<div className={classes.myContentSubArea} style={{textAlign: "center"}}>
+			</div>
+			<div className={classes.myContentSubArea} style={{ textAlign: "center" }}>
 				卒業論文「光干渉計を用いた一般的な量子位相推定」<br />
 				A general quantum phase estimation using optical interferometer
-				<br/>
+				<br />
 				<Button variant="outlined" className={classes.button} href='https://firebasestorage.googleapis.com/v0/b/portfolio-43cec.appspot.com/o/abstract.pdf?alt=media&token=26332ea3-679a-42ad-9216-1ad52150fe57' target='_blank'>
 					概要
 				</Button>
