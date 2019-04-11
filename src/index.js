@@ -4,9 +4,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 
 import Index from './components/Index';
-import Academic from './components/Academic';
-import Hobby from './components/Hobby';
-import Skill from './components/Skill';
 import Tracko from './components/Tracko';
 import ScrollToTop from './ScrollToTop';
 
